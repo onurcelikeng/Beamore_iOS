@@ -1,5 +1,5 @@
 //
-//  NotificationViewController.swift
+//  EventDetailsViewController.swift
 //  Beamore
 //
 //  Created by Onur Celik on 06/09/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationViewController: UIViewController {
+class EventDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
