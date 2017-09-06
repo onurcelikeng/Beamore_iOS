@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		605016EB1F604C20000A8428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605016EA1F604C20000A8428 /* AppDelegate.swift */; };
-		605016ED1F604C20000A8428 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605016EC1F604C20000A8428 /* FirstViewController.swift */; };
-		605016EF1F604C20000A8428 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605016EE1F604C20000A8428 /* SecondViewController.swift */; };
 		605016F21F604C20000A8428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605016F01F604C20000A8428 /* Main.storyboard */; };
 		605016F41F604C20000A8428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605016F31F604C20000A8428 /* Assets.xcassets */; };
 		605016F71F604C20000A8428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605016F51F604C20000A8428 /* LaunchScreen.storyboard */; };
 		605017021F604C20000A8428 /* BeamoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017011F604C20000A8428 /* BeamoreTests.swift */; };
 		6050170D1F604C20000A8428 /* BeamoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050170C1F604C20000A8428 /* BeamoreUITests.swift */; };
+		605017201F604E21000A8428 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050171F1F604E21000A8428 /* LoginViewController.swift */; };
+		605017221F604E6A000A8428 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017211F604E6A000A8428 /* RegisterViewController.swift */; };
+		605017291F6051DE000A8428 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017281F6051DE000A8428 /* ProfileViewController.swift */; };
+		6050172B1F605200000A8428 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050172A1F605200000A8428 /* NotificationViewController.swift */; };
+		6050172D1F60521B000A8428 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050172C1F60521B000A8428 /* SettingsViewController.swift */; };
+		605017301F60528E000A8428 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050172F1F60528E000A8428 /* DiscoverViewController.swift */; };
+		605017321F605320000A8428 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017311F605320000A8428 /* EventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +42,6 @@
 /* Begin PBXFileReference section */
 		605016E71F604C20000A8428 /* Beamore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605016EA1F604C20000A8428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		605016EC1F604C20000A8428 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		605016EE1F604C20000A8428 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		605016F11F604C20000A8428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		605016F31F604C20000A8428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605016F61F604C20000A8428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,13 @@
 		605017081F604C20000A8428 /* BeamoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeamoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6050170C1F604C20000A8428 /* BeamoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamoreUITests.swift; sourceTree = "<group>"; };
 		6050170E1F604C20000A8428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6050171F1F604E21000A8428 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		605017211F604E6A000A8428 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		605017281F6051DE000A8428 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6050172A1F605200000A8428 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		6050172C1F60521B000A8428 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6050172F1F60528E000A8428 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		605017311F605320000A8428 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +112,9 @@
 				605016EA1F604C20000A8428 /* AppDelegate.swift */,
 				605016F31F604C20000A8428 /* Assets.xcassets */,
 				6050171B1F604C5A000A8428 /* Controllers */,
-				605016EC1F604C20000A8428 /* FirstViewController.swift */,
 				605016F81F604C20000A8428 /* Info.plist */,
-				605016F51F604C20000A8428 /* LaunchScreen.storyboard */,
 				6050171A1F604C4C000A8428 /* Models */,
-				605016EE1F604C20000A8428 /* SecondViewController.swift */,
+				605017261F60508F000A8428 /* Services */,
 				6050171C1F604C73000A8428 /* Views */,
 			);
 			path = Beamore;
@@ -140,6 +148,12 @@
 		6050171B1F604C5A000A8428 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6050172E1F605234000A8428 /* Discover */,
+				6050171E1F604E03000A8428 /* Account */,
+				605017271F60517A000A8428 /* Event */,
+				605017251F60504A000A8428 /* Notifications */,
+				605017231F605018000A8428 /* Profile */,
+				605017241F605022000A8428 /* Settings */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -147,9 +161,66 @@
 		6050171C1F604C73000A8428 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				605016F51F604C20000A8428 /* LaunchScreen.storyboard */,
 				605016F01F604C20000A8428 /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		6050171E1F604E03000A8428 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				6050171F1F604E21000A8428 /* LoginViewController.swift */,
+				605017211F604E6A000A8428 /* RegisterViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		605017231F605018000A8428 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				605017281F6051DE000A8428 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		605017241F605022000A8428 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6050172C1F60521B000A8428 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		605017251F60504A000A8428 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				6050172A1F605200000A8428 /* NotificationViewController.swift */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
+		605017261F60508F000A8428 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		605017271F60517A000A8428 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				605017311F605320000A8428 /* EventViewController.swift */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
+		6050172E1F605234000A8428 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				6050172F1F60528E000A8428 /* DiscoverViewController.swift */,
+			);
+			name = Discover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				605016EF1F604C20000A8428 /* SecondViewController.swift in Sources */,
+				6050172B1F605200000A8428 /* NotificationViewController.swift in Sources */,
+				605017201F604E21000A8428 /* LoginViewController.swift in Sources */,
+				605017301F60528E000A8428 /* DiscoverViewController.swift in Sources */,
+				605017221F604E6A000A8428 /* RegisterViewController.swift in Sources */,
+				605017291F6051DE000A8428 /* ProfileViewController.swift in Sources */,
+				605017321F605320000A8428 /* EventViewController.swift in Sources */,
 				605016EB1F604C20000A8428 /* AppDelegate.swift in Sources */,
-				605016ED1F604C20000A8428 /* FirstViewController.swift in Sources */,
+				6050172D1F60521B000A8428 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
