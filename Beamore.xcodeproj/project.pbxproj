@@ -100,12 +100,14 @@
 			isa = PBXGroup;
 			children = (
 				605016EA1F604C20000A8428 /* AppDelegate.swift */,
-				605016EC1F604C20000A8428 /* FirstViewController.swift */,
-				605016EE1F604C20000A8428 /* SecondViewController.swift */,
-				605016F01F604C20000A8428 /* Main.storyboard */,
 				605016F31F604C20000A8428 /* Assets.xcassets */,
-				605016F51F604C20000A8428 /* LaunchScreen.storyboard */,
+				6050171B1F604C5A000A8428 /* Controllers */,
+				605016EC1F604C20000A8428 /* FirstViewController.swift */,
 				605016F81F604C20000A8428 /* Info.plist */,
+				605016F51F604C20000A8428 /* LaunchScreen.storyboard */,
+				6050171A1F604C4C000A8428 /* Models */,
+				605016EE1F604C20000A8428 /* SecondViewController.swift */,
+				6050171C1F604C73000A8428 /* Views */,
 			);
 			path = Beamore;
 			sourceTree = "<group>";
@@ -126,6 +128,28 @@
 				6050170E1F604C20000A8428 /* Info.plist */,
 			);
 			path = BeamoreUITests;
+			sourceTree = "<group>";
+		};
+		6050171A1F604C4C000A8428 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6050171B1F604C5A000A8428 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6050171C1F604C73000A8428 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				605016F01F604C20000A8428 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
