@@ -11,42 +11,26 @@
 		605016F21F604C20000A8428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605016F01F604C20000A8428 /* Main.storyboard */; };
 		605016F41F604C20000A8428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605016F31F604C20000A8428 /* Assets.xcassets */; };
 		605016F71F604C20000A8428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605016F51F604C20000A8428 /* LaunchScreen.storyboard */; };
-		605017021F604C20000A8428 /* BeamoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017011F604C20000A8428 /* BeamoreTests.swift */; };
-		6050170D1F604C20000A8428 /* BeamoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050170C1F604C20000A8428 /* BeamoreUITests.swift */; };
 		605017201F604E21000A8428 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050171F1F604E21000A8428 /* LoginViewController.swift */; };
 		605017221F604E6A000A8428 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017211F604E6A000A8428 /* RegisterViewController.swift */; };
 		605017291F6051DE000A8428 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017281F6051DE000A8428 /* ProfileViewController.swift */; };
-		6050172B1F605200000A8428 /* EventDetailsNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050172A1F605200000A8428 /* EventDetailsNotificationViewController.swift */; };
-		6050172D1F60521B000A8428 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050172C1F60521B000A8428 /* SettingsViewController.swift */; };
 		605017301F60528E000A8428 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050172F1F60528E000A8428 /* DiscoverViewController.swift */; };
 		605017321F605320000A8428 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017311F605320000A8428 /* EventViewController.swift */; };
 		605017371F605A7B000A8428 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017361F605A7B000A8428 /* EventDetailsViewController.swift */; };
-		6050173C1F605C46000A8428 /* EventDetailsSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050173B1F605C46000A8428 /* EventDetailsSurveyViewController.swift */; };
-		6050173E1F605C9F000A8428 /* EventDetailsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050173D1F605C9F000A8428 /* EventDetailsHomeViewController.swift */; };
-		605017401F605CAD000A8428 /* EventDetailsPlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6050173F1F605CAD000A8428 /* EventDetailsPlannerViewController.swift */; };
-		60C6C3511F64096800CCE3D9 /* EventTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3501F64096800CCE3D9 /* EventTableView.swift */; };
+		6062B40D1F90AA54003489BF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062B40C1F90AA54003489BF /* ForgotPasswordViewController.swift */; };
+		60B023141F9005C1000FDE0E /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B023131F9005C1000FDE0E /* EventDetailModel.swift */; };
 		60C6C3531F64097900CCE3D9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3521F64097900CCE3D9 /* EventTableViewCell.swift */; };
 		60C6C3551F640ECE00CCE3D9 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3541F640ECE00CCE3D9 /* DiscoverTableViewCell.swift */; };
-		60C6C3571F640EDD00CCE3D9 /* DiscoverTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3561F640EDD00CCE3D9 /* DiscoverTableView.swift */; };
 		60C6C35A1F640FC800CCE3D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3591F640FC800CCE3D9 /* BaseViewController.swift */; };
+		60D0FAED1F8617F8008A14E2 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D0FAEC1F8617F8008A14E2 /* ResultModel.swift */; };
+		60D0FAEF1F861898008A14E2 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D0FAEE1F861898008A14E2 /* EventModel.swift */; };
+		60D95DD41F85668D00FF06C0 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D95DD31F85668D00FF06C0 /* EventService.swift */; };
+		60DAF9111F8ED141000403C7 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAF9101F8ED141000403C7 /* NotificationModel.swift */; };
+		60DAF9131F8ED1A3000403C7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAF9121F8ED1A3000403C7 /* NotificationService.swift */; };
+		60DAF9151F8F5F2D000403C7 /* DiscoverEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAF9141F8F5F2D000403C7 /* DiscoverEventModel.swift */; };
+		60EFA58F1F744D8A00899A56 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EFA58E1F744D8A00899A56 /* AccountService.swift */; };
+		60EFA5911F744E6400899A56 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EFA5901F744E6400899A56 /* TokenModel.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		605016FE1F604C20000A8428 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 605016DF1F604C20000A8428 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 605016E61F604C20000A8428;
-			remoteInfo = Beamore;
-		};
-		605017091F604C20000A8428 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 605016DF1F604C20000A8428 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 605016E61F604C20000A8428;
-			remoteInfo = Beamore;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		605016E71F604C20000A8428 /* Beamore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,46 +39,29 @@
 		605016F31F604C20000A8428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605016F61F604C20000A8428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		605016F81F604C20000A8428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		605016FD1F604C20000A8428 /* BeamoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeamoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		605017011F604C20000A8428 /* BeamoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamoreTests.swift; sourceTree = "<group>"; };
-		605017031F604C20000A8428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		605017081F604C20000A8428 /* BeamoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeamoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6050170C1F604C20000A8428 /* BeamoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamoreUITests.swift; sourceTree = "<group>"; };
-		6050170E1F604C20000A8428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6050171F1F604E21000A8428 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		605017211F604E6A000A8428 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		605017281F6051DE000A8428 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		6050172A1F605200000A8428 /* EventDetailsNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsNotificationViewController.swift; sourceTree = "<group>"; };
-		6050172C1F60521B000A8428 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6050172F1F60528E000A8428 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		605017311F605320000A8428 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		605017361F605A7B000A8428 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
-		6050173B1F605C46000A8428 /* EventDetailsSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsSurveyViewController.swift; sourceTree = "<group>"; };
-		6050173D1F605C9F000A8428 /* EventDetailsHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsHomeViewController.swift; sourceTree = "<group>"; };
-		6050173F1F605CAD000A8428 /* EventDetailsPlannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsPlannerViewController.swift; sourceTree = "<group>"; };
-		60C6C3501F64096800CCE3D9 /* EventTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableView.swift; sourceTree = "<group>"; };
+		6062B40C1F90AA54003489BF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		60B023131F9005C1000FDE0E /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		60C6C3521F64097900CCE3D9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		60C6C3541F640ECE00CCE3D9 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
-		60C6C3561F640EDD00CCE3D9 /* DiscoverTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableView.swift; sourceTree = "<group>"; };
 		60C6C3591F640FC800CCE3D9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		60D0FAEC1F8617F8008A14E2 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		60D0FAEE1F861898008A14E2 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		60D95DD31F85668D00FF06C0 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		60DAF9101F8ED141000403C7 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		60DAF9121F8ED1A3000403C7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		60DAF9141F8F5F2D000403C7 /* DiscoverEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverEventModel.swift; sourceTree = "<group>"; };
+		60EFA58E1F744D8A00899A56 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		60EFA5901F744E6400899A56 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		605016E41F604C20000A8428 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		605016FA1F604C20000A8428 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		605017051F604C20000A8428 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -108,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				605016E91F604C20000A8428 /* Beamore */,
-				605017001F604C20000A8428 /* BeamoreTests */,
-				6050170B1F604C20000A8428 /* BeamoreUITests */,
 				605016E81F604C20000A8428 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				605016E71F604C20000A8428 /* Beamore.app */,
-				605016FD1F604C20000A8428 /* BeamoreTests.xctest */,
-				605017081F604C20000A8428 /* BeamoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,8 +92,8 @@
 			children = (
 				605016EA1F604C20000A8428 /* AppDelegate.swift */,
 				605016F31F604C20000A8428 /* Assets.xcassets */,
-				6050171B1F604C5A000A8428 /* Controllers */,
 				605016F81F604C20000A8428 /* Info.plist */,
+				6050171B1F604C5A000A8428 /* Controllers */,
 				6050171A1F604C4C000A8428 /* Models */,
 				605017261F60508F000A8428 /* Services */,
 				6050171C1F604C73000A8428 /* Views */,
@@ -138,27 +101,15 @@
 			path = Beamore;
 			sourceTree = "<group>";
 		};
-		605017001F604C20000A8428 /* BeamoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				605017011F604C20000A8428 /* BeamoreTests.swift */,
-				605017031F604C20000A8428 /* Info.plist */,
-			);
-			path = BeamoreTests;
-			sourceTree = "<group>";
-		};
-		6050170B1F604C20000A8428 /* BeamoreUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6050170C1F604C20000A8428 /* BeamoreUITests.swift */,
-				6050170E1F604C20000A8428 /* Info.plist */,
-			);
-			path = BeamoreUITests;
-			sourceTree = "<group>";
-		};
 		6050171A1F604C4C000A8428 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				60EFA5901F744E6400899A56 /* TokenModel.swift */,
+				60D0FAEC1F8617F8008A14E2 /* ResultModel.swift */,
+				60D0FAEE1F861898008A14E2 /* EventModel.swift */,
+				60DAF9101F8ED141000403C7 /* NotificationModel.swift */,
+				60DAF9141F8F5F2D000403C7 /* DiscoverEventModel.swift */,
+				60B023131F9005C1000FDE0E /* EventDetailModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -172,7 +123,6 @@
 				605017351F605A64000A8428 /* EventDetails */,
 				6050172E1F605234000A8428 /* Discover */,
 				605017231F605018000A8428 /* Profile */,
-				605017241F605022000A8428 /* Settings */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +141,7 @@
 			children = (
 				6050171F1F604E21000A8428 /* LoginViewController.swift */,
 				605017211F604E6A000A8428 /* RegisterViewController.swift */,
+				6062B40C1F90AA54003489BF /* ForgotPasswordViewController.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -203,26 +154,12 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
-		605017241F605022000A8428 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				6050172C1F60521B000A8428 /* SettingsViewController.swift */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
-		605017251F60504A000A8428 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				605017411F605D1D000A8428 /* TableView */,
-				6050172A1F605200000A8428 /* EventDetailsNotificationViewController.swift */,
-			);
-			name = Notifications;
-			sourceTree = "<group>";
-		};
 		605017261F60508F000A8428 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				60EFA58E1F744D8A00899A56 /* AccountService.swift */,
+				60D95DD31F85668D00FF06C0 /* EventService.swift */,
+				60DAF9121F8ED1A3000403C7 /* NotificationService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -248,59 +185,14 @@
 		605017351F605A64000A8428 /* EventDetails */ = {
 			isa = PBXGroup;
 			children = (
-				605017391F605B57000A8428 /* Home */,
-				6050173A1F605B98000A8428 /* Planner */,
-				605017251F60504A000A8428 /* Notifications */,
-				605017381F605B0B000A8428 /* Survey */,
 				605017361F605A7B000A8428 /* EventDetailsViewController.swift */,
 			);
 			name = EventDetails;
 			sourceTree = "<group>";
 		};
-		605017381F605B0B000A8428 /* Survey */ = {
-			isa = PBXGroup;
-			children = (
-				605017421F605D33000A8428 /* TableView */,
-				6050173B1F605C46000A8428 /* EventDetailsSurveyViewController.swift */,
-			);
-			name = Survey;
-			sourceTree = "<group>";
-		};
-		605017391F605B57000A8428 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				6050173D1F605C9F000A8428 /* EventDetailsHomeViewController.swift */,
-			);
-			name = Home;
-			sourceTree = "<group>";
-		};
-		6050173A1F605B98000A8428 /* Planner */ = {
-			isa = PBXGroup;
-			children = (
-				605017451F605D58000A8428 /* TableView */,
-				6050173F1F605CAD000A8428 /* EventDetailsPlannerViewController.swift */,
-			);
-			name = Planner;
-			sourceTree = "<group>";
-		};
-		605017411F605D1D000A8428 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
-		605017421F605D33000A8428 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
 		605017431F605D3F000A8428 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				60C6C3501F64096800CCE3D9 /* EventTableView.swift */,
 				60C6C3521F64097900CCE3D9 /* EventTableViewCell.swift */,
 			);
 			name = TableView;
@@ -310,14 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				60C6C3541F640ECE00CCE3D9 /* DiscoverTableViewCell.swift */,
-				60C6C3561F640EDD00CCE3D9 /* DiscoverTableView.swift */,
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
-		605017451F605D58000A8428 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -350,42 +234,6 @@
 			productReference = 605016E71F604C20000A8428 /* Beamore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		605016FC1F604C20000A8428 /* BeamoreTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 605017141F604C20000A8428 /* Build configuration list for PBXNativeTarget "BeamoreTests" */;
-			buildPhases = (
-				605016F91F604C20000A8428 /* Sources */,
-				605016FA1F604C20000A8428 /* Frameworks */,
-				605016FB1F604C20000A8428 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				605016FF1F604C20000A8428 /* PBXTargetDependency */,
-			);
-			name = BeamoreTests;
-			productName = BeamoreTests;
-			productReference = 605016FD1F604C20000A8428 /* BeamoreTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		605017071F604C20000A8428 /* BeamoreUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 605017171F604C20000A8428 /* Build configuration list for PBXNativeTarget "BeamoreUITests" */;
-			buildPhases = (
-				605017041F604C20000A8428 /* Sources */,
-				605017051F604C20000A8428 /* Frameworks */,
-				605017061F604C20000A8428 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6050170A1F604C20000A8428 /* PBXTargetDependency */,
-			);
-			name = BeamoreUITests;
-			productName = BeamoreUITests;
-			productReference = 605017081F604C20000A8428 /* BeamoreUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -398,20 +246,8 @@
 				TargetAttributes = {
 					605016E61F604C20000A8428 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7S7K8Z75EQ;
+						DevelopmentTeam = Y9BJGDH56U;
 						ProvisioningStyle = Automatic;
-					};
-					605016FC1F604C20000A8428 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7S7K8Z75EQ;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 605016E61F604C20000A8428;
-					};
-					605017071F604C20000A8428 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7S7K8Z75EQ;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 605016E61F604C20000A8428;
 					};
 				};
 			};
@@ -429,8 +265,6 @@
 			projectRoot = "";
 			targets = (
 				605016E61F604C20000A8428 /* Beamore */,
-				605016FC1F604C20000A8428 /* BeamoreTests */,
-				605017071F604C20000A8428 /* BeamoreUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -446,20 +280,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		605016FB1F604C20000A8428 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		605017061F604C20000A8428 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -467,56 +287,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6050173C1F605C46000A8428 /* EventDetailsSurveyViewController.swift in Sources */,
-				6050172B1F605200000A8428 /* EventDetailsNotificationViewController.swift in Sources */,
+				60EFA5911F744E6400899A56 /* TokenModel.swift in Sources */,
+				60EFA58F1F744D8A00899A56 /* AccountService.swift in Sources */,
 				605017201F604E21000A8428 /* LoginViewController.swift in Sources */,
+				60DAF9151F8F5F2D000403C7 /* DiscoverEventModel.swift in Sources */,
+				60D0FAED1F8617F8008A14E2 /* ResultModel.swift in Sources */,
+				60B023141F9005C1000FDE0E /* EventDetailModel.swift in Sources */,
 				605017301F60528E000A8428 /* DiscoverViewController.swift in Sources */,
-				60C6C3571F640EDD00CCE3D9 /* DiscoverTableView.swift in Sources */,
 				60C6C3531F64097900CCE3D9 /* EventTableViewCell.swift in Sources */,
+				60D95DD41F85668D00FF06C0 /* EventService.swift in Sources */,
+				6062B40D1F90AA54003489BF /* ForgotPasswordViewController.swift in Sources */,
 				605017221F604E6A000A8428 /* RegisterViewController.swift in Sources */,
 				60C6C35A1F640FC800CCE3D9 /* BaseViewController.swift in Sources */,
-				6050173E1F605C9F000A8428 /* EventDetailsHomeViewController.swift in Sources */,
 				605017291F6051DE000A8428 /* ProfileViewController.swift in Sources */,
 				605017321F605320000A8428 /* EventViewController.swift in Sources */,
 				605017371F605A7B000A8428 /* EventDetailsViewController.swift in Sources */,
-				60C6C3511F64096800CCE3D9 /* EventTableView.swift in Sources */,
 				60C6C3551F640ECE00CCE3D9 /* DiscoverTableViewCell.swift in Sources */,
-				605017401F605CAD000A8428 /* EventDetailsPlannerViewController.swift in Sources */,
+				60D0FAEF1F861898008A14E2 /* EventModel.swift in Sources */,
+				60DAF9131F8ED1A3000403C7 /* NotificationService.swift in Sources */,
 				605016EB1F604C20000A8428 /* AppDelegate.swift in Sources */,
-				6050172D1F60521B000A8428 /* SettingsViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		605016F91F604C20000A8428 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				605017021F604C20000A8428 /* BeamoreTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		605017041F604C20000A8428 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6050170D1F604C20000A8428 /* BeamoreUITests.swift in Sources */,
+				60DAF9111F8ED141000403C7 /* NotificationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		605016FF1F604C20000A8428 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 605016E61F604C20000A8428 /* Beamore */;
-			targetProxy = 605016FE1F604C20000A8428 /* PBXContainerItemProxy */;
-		};
-		6050170A1F604C20000A8428 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 605016E61F604C20000A8428 /* Beamore */;
-			targetProxy = 605017091F604C20000A8428 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		605016F01F604C20000A8428 /* Main.storyboard */ = {
@@ -635,10 +429,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7S7K8Z75EQ;
+				DEVELOPMENT_TEAM = Y9BJGDH56U;
 				INFOPLIST_FILE = Beamore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onurcelikeng.Beamore;
+				PRODUCT_BUNDLE_IDENTIFIER = ersinyildiz.Beamore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -648,70 +443,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7S7K8Z75EQ;
+				DEVELOPMENT_TEAM = Y9BJGDH56U;
 				INFOPLIST_FILE = Beamore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onurcelikeng.Beamore;
+				PRODUCT_BUNDLE_IDENTIFIER = ersinyildiz.Beamore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		605017151F604C20000A8428 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 7S7K8Z75EQ;
-				INFOPLIST_FILE = BeamoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onurcelikeng.BeamoreTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beamore.app/Beamore";
-			};
-			name = Debug;
-		};
-		605017161F604C20000A8428 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 7S7K8Z75EQ;
-				INFOPLIST_FILE = BeamoreTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onurcelikeng.BeamoreTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beamore.app/Beamore";
-			};
-			name = Release;
-		};
-		605017181F604C20000A8428 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 7S7K8Z75EQ;
-				INFOPLIST_FILE = BeamoreUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onurcelikeng.BeamoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Beamore;
-			};
-			name = Debug;
-		};
-		605017191F604C20000A8428 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 7S7K8Z75EQ;
-				INFOPLIST_FILE = BeamoreUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = onurcelikeng.BeamoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Beamore;
 			};
 			name = Release;
 		};
@@ -732,24 +470,6 @@
 			buildConfigurations = (
 				605017121F604C20000A8428 /* Debug */,
 				605017131F604C20000A8428 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		605017141F604C20000A8428 /* Build configuration list for PBXNativeTarget "BeamoreTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				605017151F604C20000A8428 /* Debug */,
-				605017161F604C20000A8428 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		605017171F604C20000A8428 /* Build configuration list for PBXNativeTarget "BeamoreUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				605017181F604C20000A8428 /* Debug */,
-				605017191F604C20000A8428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
