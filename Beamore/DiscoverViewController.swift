@@ -41,7 +41,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    func refresh(_ sender: Any) {
+    @objc func refresh(_ sender: Any) {
         self.eventList.removeAll()
         getEvents()
         refreshControl.endRefreshing()
@@ -54,24 +54,24 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "discoverTableCell", for: indexPath) as! DiscoverTableViewCell
         if(eventList.count > 0) {
-            cell.eventName.text = eventList[indexPath.row].EventName
-            cell.eventEmail.text = eventList[indexPath.row].EventEmail
+            cell.eventName.text = eventList[indexPath.row].eventName
+            cell.eventEmail.text = eventList[indexPath.row].eventEmail
             
-            /*DispatchQueue.main.async {
-             let logoUrl = NSURL(string: self.eventList[indexPath.row].LogoUrl!)
+            DispatchQueue.main.async {
+                let logoUrl = NSURL(string: self.eventList[indexPath.row].logoUrl)
              if logoUrl != nil {
              let data = NSData(contentsOf: (logoUrl as URL?)!)
              cell.eventPhoto.image = UIImage(data: data! as Data)
              cell.eventPhoto.layer.cornerRadius = cell.eventPhoto.layer.frame.height / 2
              }
-             }*/
+         }
         }
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let eventKey = eventList[indexPath.row].EventKey!
+        let eventKey = eventList[indexPath.row].eventKey
         
         let alert = UIAlertController(title: "Bildirim", message: "Etkinliğe kayıt olmak istediğinize emin misiniz?", preferredStyle: UIAlertControllerStyle.alert)
         let DestructiveAction = UIAlertAction(title: "Hayır", style: UIAlertActionStyle.destructive) {
@@ -81,9 +81,9 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
         let okAction = UIAlertAction(title: "Evet", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
             let client = EventService()
-            let result = client.subscribeEvent(eventKey: eventKey, completionHandler: { (model) -> Void in
-                if (model.IsSuccess)! {
-                    let alertSuccess = UIAlertController(title: "Bildirim", message: model.Message, preferredStyle: UIAlertControllerStyle.alert)
+            _ = client.subscribeEvent(eventKey: eventKey, completionHandler: { (model) -> Void in
+                if (model.isSuccess) {
+                    let alertSuccess = UIAlertController(title: "Bildirim", message: model.message, preferredStyle: UIAlertControllerStyle.alert)
                     let closeAction = UIAlertAction(title: "Kapat", style: UIAlertActionStyle.destructive) {
                         (result : UIAlertAction) -> Void in
                     }

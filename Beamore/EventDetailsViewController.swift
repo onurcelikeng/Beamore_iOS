@@ -15,7 +15,8 @@ class EventDetailsViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var notificationView: UIView!
     @IBOutlet weak var surveyView: UIView!
     public static var eventKey: String = ""
-    
+    public static var eventPhotoText: String = ""
+    public static var eventNameText: String = ""
     @IBOutlet weak var eventPhoto: UIImageView!
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventPersonSize: UILabel!
@@ -27,6 +28,8 @@ class EventDetailsViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configure()
+        self.getEventParticipant()
     }
 
     
@@ -35,6 +38,27 @@ class EventDetailsViewController: UIViewController, UITableViewDataSource, UITab
         flowView.isHidden = true
         notificationView.isHidden = true
         surveyView.isHidden = true
+        eventName.text = EventDetailsViewController.eventNameText
+        DispatchQueue.main.async {
+            let logoUrl = NSURL(string: EventDetailsViewController.eventPhotoText)
+            if logoUrl != nil {
+                let data = NSData(contentsOf: (logoUrl as URL?)!)
+                self.eventPhoto.image = UIImage(data: data! as Data)
+            }
+        }
+    }
+    
+    private func getEventParticipant() {
+        let client = EventService()
+        DispatchQueue.global(qos: .userInitiated).async {
+            client.getEventParticipant(eventKey: EventDetailsViewController.eventKey) { (model) -> Void in
+                DispatchQueue.main.async {
+                    if model != nil {
+                        self.eventPersonSize.text = String(model.data) + " kişi kayıtlı"
+                    }
+                }
+            }
+        }
     }
     
     private func getEventNotifications() {
@@ -96,7 +120,7 @@ class EventDetailsViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = notificationList[indexPath.row].Message
+        cell.textLabel?.text = notificationList[indexPath.row].message
         
         return cell
     }

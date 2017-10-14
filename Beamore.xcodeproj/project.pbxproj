@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6001CE9A1F90E65900B4A0CE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6001CE991F90E65900B4A0CE /* TabBarViewController.swift */; };
+		6001CE9D1F90EA8300B4A0CE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6001CE9B1F90EA8300B4A0CE /* Profile.storyboard */; };
 		605016EB1F604C20000A8428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605016EA1F604C20000A8428 /* AppDelegate.swift */; };
 		605016F21F604C20000A8428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605016F01F604C20000A8428 /* Main.storyboard */; };
 		605016F41F604C20000A8428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605016F31F604C20000A8428 /* Assets.xcassets */; };
@@ -19,6 +21,7 @@
 		605017371F605A7B000A8428 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605017361F605A7B000A8428 /* EventDetailsViewController.swift */; };
 		6062B40D1F90AA54003489BF /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062B40C1F90AA54003489BF /* ForgotPasswordViewController.swift */; };
 		60B023141F9005C1000FDE0E /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B023131F9005C1000FDE0E /* EventDetailModel.swift */; };
+		60C4CE821F9295A1006607DE /* EventParticipantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C4CE811F9295A1006607DE /* EventParticipantModel.swift */; };
 		60C6C3531F64097900CCE3D9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3521F64097900CCE3D9 /* EventTableViewCell.swift */; };
 		60C6C3551F640ECE00CCE3D9 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3541F640ECE00CCE3D9 /* DiscoverTableViewCell.swift */; };
 		60C6C35A1F640FC800CCE3D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6C3591F640FC800CCE3D9 /* BaseViewController.swift */; };
@@ -33,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6001CE991F90E65900B4A0CE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6001CE9C1F90EA8300B4A0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Beamore/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		605016E71F604C20000A8428 /* Beamore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605016EA1F604C20000A8428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605016F11F604C20000A8428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		605017361F605A7B000A8428 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		6062B40C1F90AA54003489BF /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		60B023131F9005C1000FDE0E /* EventDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
+		60C4CE811F9295A1006607DE /* EventParticipantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventParticipantModel.swift; sourceTree = "<group>"; };
 		60C6C3521F64097900CCE3D9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		60C6C3541F640ECE00CCE3D9 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		60C6C3591F640FC800CCE3D9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		605016DE1F604C20000A8428 = {
 			isa = PBXGroup;
 			children = (
+				6001CE9B1F90EA8300B4A0CE /* Profile.storyboard */,
 				605016E91F604C20000A8428 /* Beamore */,
 				605016E81F604C20000A8428 /* Products */,
 			);
@@ -110,6 +117,7 @@
 				60DAF9101F8ED141000403C7 /* NotificationModel.swift */,
 				60DAF9141F8F5F2D000403C7 /* DiscoverEventModel.swift */,
 				60B023131F9005C1000FDE0E /* EventDetailModel.swift */,
+				60C4CE811F9295A1006607DE /* EventParticipantModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -123,6 +131,7 @@
 				605017351F605A64000A8428 /* EventDetails */,
 				6050172E1F605234000A8428 /* Discover */,
 				605017231F605018000A8428 /* Profile */,
+				6001CE991F90E65900B4A0CE /* TabBarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -241,12 +250,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Onur Celik";
 				TargetAttributes = {
 					605016E61F604C20000A8428 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Y9BJGDH56U;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -276,6 +286,7 @@
 			files = (
 				605016F71F604C20000A8428 /* LaunchScreen.storyboard in Resources */,
 				605016F41F604C20000A8428 /* Assets.xcassets in Resources */,
+				6001CE9D1F90EA8300B4A0CE /* Profile.storyboard in Resources */,
 				605016F21F604C20000A8428 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,11 +302,13 @@
 				60EFA58F1F744D8A00899A56 /* AccountService.swift in Sources */,
 				605017201F604E21000A8428 /* LoginViewController.swift in Sources */,
 				60DAF9151F8F5F2D000403C7 /* DiscoverEventModel.swift in Sources */,
+				6001CE9A1F90E65900B4A0CE /* TabBarViewController.swift in Sources */,
 				60D0FAED1F8617F8008A14E2 /* ResultModel.swift in Sources */,
 				60B023141F9005C1000FDE0E /* EventDetailModel.swift in Sources */,
 				605017301F60528E000A8428 /* DiscoverViewController.swift in Sources */,
 				60C6C3531F64097900CCE3D9 /* EventTableViewCell.swift in Sources */,
 				60D95DD41F85668D00FF06C0 /* EventService.swift in Sources */,
+				60C4CE821F9295A1006607DE /* EventParticipantModel.swift in Sources */,
 				6062B40D1F90AA54003489BF /* ForgotPasswordViewController.swift in Sources */,
 				605017221F604E6A000A8428 /* RegisterViewController.swift in Sources */,
 				60C6C35A1F640FC800CCE3D9 /* BaseViewController.swift in Sources */,
@@ -313,6 +326,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6001CE9B1F90EA8300B4A0CE /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6001CE9C1F90EA8300B4A0CE /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
 		605016F01F604C20000A8428 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,7 +363,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -350,7 +373,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -373,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +419,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -400,7 +429,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -417,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -435,7 +468,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ersinyildiz.Beamore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -449,7 +483,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ersinyildiz.Beamore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

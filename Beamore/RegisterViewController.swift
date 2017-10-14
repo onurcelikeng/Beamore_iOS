@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: BaseViewController {
+class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameUITextFiled: UITextField!
     @IBOutlet weak var emailUITextFiled: UITextField!
     @IBOutlet weak var passwordUITextFiled: UITextField!
@@ -23,16 +23,25 @@ class RegisterViewController: BaseViewController {
     
     
     private func configure() {
+        var frameUserName = usernameUITextFiled.frame
+        frameUserName.size.height = 35
+        usernameUITextFiled.frame = frameUserName
         usernameUITextFiled.layer.cornerRadius = 10
         usernameUITextFiled.layer.borderColor = (UIColor .lightGray).cgColor;
         usernameUITextFiled.layer.borderWidth = 0.5
         usernameUITextFiled.keyboardType = UIKeyboardType.emailAddress
         
+        var frameEmail = emailUITextFiled.frame
+        frameEmail.size.height = 35
+        emailUITextFiled.frame = frameEmail
         emailUITextFiled.layer.cornerRadius = 10
         emailUITextFiled.layer.borderColor = (UIColor .lightGray).cgColor;
         emailUITextFiled.layer.borderWidth = 0.5
         emailUITextFiled.keyboardType = UIKeyboardType.emailAddress
         
+        var framePassword = passwordUITextFiled.frame
+        framePassword.size.height = 35
+        passwordUITextFiled.frame = framePassword
         passwordUITextFiled.layer.cornerRadius = 10
         passwordUITextFiled.layer.borderColor = (UIColor .lightGray).cgColor;
         passwordUITextFiled.layer.borderWidth = 0.5
@@ -45,7 +54,7 @@ class RegisterViewController: BaseViewController {
         view.addGestureRecognizer(tap)
     }
     
-    public func dismissKeyboard() {
+    @objc public func dismissKeyboard() {
         view.endEditing(true)
     }
     
@@ -58,7 +67,7 @@ class RegisterViewController: BaseViewController {
             DispatchQueue.global(qos: .userInitiated).async {
                 let accountService = AccountService()
                 accountService.register(username: username!, email: email!, password: password!) { (model) -> Void in
-                    if model.IsSuccess! {
+                    if model.isSuccess {
                         DispatchQueue.main.async(execute: {
                             let alertSuccess = UIAlertController(title: "Bildirim", message: "Onay mesajı mail adresine gönderilmiştir. Lütfen hesabınızı kontrol ediniz ve onaylayınız.", preferredStyle: UIAlertControllerStyle.alert)
                             let closeAction = UIAlertAction(title: "Kapat", style: UIAlertActionStyle.destructive) {

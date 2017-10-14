@@ -8,31 +8,45 @@
 
 import Foundation
 
-public class EventModel {
-    var EventKey: String?
-    var EventName: String?
-    var EventEmail: String?
-    var EventStartDate: Date?
-    var EventFinishDate: Date?
-    var EventStartTime: Date?
-    var LogoUrl: String?
+class EventModel {
+    var eventKey: String
+    var eventName: String
+    var eventEmail: String
+    var eventStartDate: Date
+    var eventFinishDate: Date
+    var eventStartTime: Date
+    var logoUrl: String
     //public LocationDTO Location { get; set; }
-    var EventCategory: String?
-    var IsPublish: Bool?
+    var eventCategory: String
+    var isPublish: Bool
     
-    init() {
+    
+    init(_ json: [String:AnyObject]) {
+        if let eventKey = json["EventKey"] as? String { self.eventKey = eventKey }
+        else { self.eventKey = "" }
         
-    }
-    
-    init (_ json: [String: AnyObject]) {
-        self.EventKey = json["EventKey"] as? String
-        self.EventName = json["EventName"] as? String
-        self.EventEmail = json["EventEmail"] as? String
-        self.EventStartDate = json["EventStartDate"] as? Date
-        self.EventFinishDate = json["EventFinishDate"] as? Date
-        self.EventStartTime = json["EventStartTime"] as? Date
-        self.LogoUrl = json["LogoUrl"] as? String
-        self.EventCategory = json["EventCategory"] as? String
-        self.IsPublish = json["IsPublish"] as? Bool
+        if let eventName = json["EventName"] as? String { self.eventName = eventName }
+        else { self.eventName = "" }
+        
+        if let eventEmail = json["EventEmail"] as? String { self.eventEmail = eventEmail }
+        else { self.eventEmail = "" }
+        
+        if let eventStartDate = json["EventStartDate"] as? Date { self.eventStartDate = eventStartDate }
+        else { self.eventStartDate = Date() }
+        
+        if let eventFinishDate = json["EventFinishDate"] as? Date { self.eventFinishDate = eventFinishDate }
+        else { self.eventFinishDate = Date() }
+        
+        if let eventStartTime = json["EventStartTime"] as? Date { self.eventStartTime = eventStartTime }
+        else { self.eventStartTime = Date() }
+        
+        if let logoUrl = json["LogoUrl"] as? String { self.logoUrl = logoUrl }
+        else { self.logoUrl = "" }
+        
+        if let eventCategory = json["EventCategory"] as? String { self.eventCategory = eventCategory }
+        else { self.eventCategory = "" }
+        
+        if let isPublish = json["IsPublish"] as? Bool { self.isPublish = isPublish }
+        else { self.isPublish = false }
     }
 }

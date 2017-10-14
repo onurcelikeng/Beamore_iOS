@@ -9,16 +9,13 @@
 import Foundation
 
 class NotificationService {
-    let token = "VREQO3gERnpmm-lYUj0nisi0UKP1mI52KiiSt0zBO6NQ_iQ4oYsDksWItII0pcaiFA52YfljnoWcmyhmwcT5q_6i5Bo8zKPKIymN2N6zrtTjY89p8Axn79p14elhxeVlEaTLLPHEJZzw5T6CJpCVA30rN73kaBIDIe2plHgsrDGouu8mnqsY0Hs7GCuGLukbGtjV7oa30f4PyyNa71lO3U69k5NudJfZpG70e6Ffx4lcNLM6KZ26FpBzTaz6DPb0KkbJHKCruSAHUgpRhJpVz91pOcHMoLubKXrTgwF98waNfuRSoXrm_fsHeM8fPJjLfJtloj0aniEoomyAXVYEDw"
-    
-    
-    public func NotificationService() { }
-    
+
     
     public func getEventNotifications(eventKey: String, completionHandler: @escaping ([NotificationModel]) -> Void) {
         var list: [NotificationModel] = []
+        let token = UserDefaults.standard.string(forKey: "token")
         let headers = [
-            "authorization": "bearer \(token)",
+            "authorization": "bearer " + token!,
             "cache-control": "no-cache"
         ]
         
@@ -34,10 +31,12 @@ class NotificationService {
                 do{
                     if let json = try JSONSerialization.jsonObject(with: _data) as? [String: Any] {
                         let notifications = json["Data"] as? [[String: AnyObject]]
-                        
-                        for notification in notifications! {
-                            list.append(NotificationModel(notification))
+                        if notifications != nil {
+                            for notification in notifications! {
+                                list.append(NotificationModel(notification))
+                            }
                         }
+                        
                         completionHandler(list)
                     }
                 } catch { }
@@ -45,4 +44,5 @@ class NotificationService {
         })
         dataTask.resume()
     }
+    
 }

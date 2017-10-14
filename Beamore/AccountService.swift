@@ -9,11 +9,8 @@
 import Foundation
 
 class AccountService {
-    private let baseUrl = "http://beamoredevelopmentapi.azurewebsites.net"
-    
-    
-    public func AccountService() { }
-    
+    private let token = UserDefaults.standard.string(forKey: "token")
+
     
     public func register(username: String, email: String, password: String, completionHandler: @escaping (ResultModel) -> Void) {
         let headers = [
@@ -105,7 +102,6 @@ class AccountService {
                     
                 } else {
                     let httpResponse = response as? HTTPURLResponse
-                    print(httpResponse)
                 }
             })
             

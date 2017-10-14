@@ -25,9 +25,9 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     
-    func refresh(_ sender: Any) {
+    @objc func refresh(_ sender: Any) {
         self.eventList.removeAll()
-        getEvents()
+        //getEvents()
         refreshControl.endRefreshing()
     }
 
@@ -53,28 +53,30 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventTableCell", for: indexPath) as! EventTableViewCell
         if(eventList.count > 0) {
-            cell.eventName.text = eventList[indexPath.row].EventName
-            cell.eventEmail.text = eventList[indexPath.row].EventEmail
+            cell.eventName.text = eventList[indexPath.row].eventName
+            cell.eventEmail.text = eventList[indexPath.row].eventEmail
             
-            /*DispatchQueue.main.async {
-             let logoUrl = NSURL(string: self.eventList[indexPath.row].LogoUrl!)
+        DispatchQueue.main.async {
+            let logoUrl = NSURL(string: self.eventList[indexPath.row].logoUrl)
              if logoUrl != nil {
              let data = NSData(contentsOf: (logoUrl as URL?)!)
              cell.eventPhoto.image = UIImage(data: data! as Data)
              cell.eventPhoto.layer.cornerRadius = cell.eventPhoto.layer.frame.height / 2
              }
-             }*/
+         }
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let eventKey = self.eventList[indexPath.row].EventKey {
-            EventDetailsViewController.eventKey = eventKey
-            performSegue(withIdentifier: "oneSegue", sender: nil)
-            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
-        }
+        EventDetailsViewController.eventKey = self.eventList[indexPath.row].eventKey
+        EventDetailsViewController.eventPhotoText = self.eventList[indexPath.row].logoUrl
+        EventDetailsViewController.eventNameText = self.eventList[indexPath.row].eventName
+        
+        performSegue(withIdentifier: "oneSegue", sender: nil)
+        tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
+    
     }
 
 }

@@ -9,16 +9,12 @@
 import Foundation
 
 class EventService {
-    let token = "VREQO3gERnpmm-lYUj0nisi0UKP1mI52KiiSt0zBO6NQ_iQ4oYsDksWItII0pcaiFA52YfljnoWcmyhmwcT5q_6i5Bo8zKPKIymN2N6zrtTjY89p8Axn79p14elhxeVlEaTLLPHEJZzw5T6CJpCVA30rN73kaBIDIe2plHgsrDGouu8mnqsY0Hs7GCuGLukbGtjV7oa30f4PyyNa71lO3U69k5NudJfZpG70e6Ffx4lcNLM6KZ26FpBzTaz6DPb0KkbJHKCruSAHUgpRhJpVz91pOcHMoLubKXrTgwF98waNfuRSoXrm_fsHeM8fPJjLfJtloj0aniEoomyAXVYEDw"
-    
-    
-    public func EventService() { }
-    
-    
+
     public func getAllEvents(completionHandler: @escaping ([EventModel]) -> Void) {
         var list: [EventModel] = []
+        let token = UserDefaults.standard.string(forKey: "token")
         let headers = [
-            "authorization": "bearer \(token)",
+            "authorization": "bearer " + token!,
             "cache-control": "no-cache"
         ]
         
@@ -48,8 +44,9 @@ class EventService {
     
     public func getMyEvents(completionHandler: @escaping ([EventModel]) -> Void) {
         var list: [EventModel] = []
+        let token = UserDefaults.standard.string(forKey: "token")
         let headers = [
-            "authorization": "bearer \(token)",
+            "authorization": "bearer " + token!,
             "cache-control": "no-cache"
         ]
         
@@ -77,14 +74,39 @@ class EventService {
         dataTask.resume()
     }
     
-    public func getEventDetails(eventKey: String) {
+    public func getEventParticipant(eventKey:String, completionHandler: @escaping (EventParticipantModel) -> Void) {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers = [
+            "authorization": "bearer " + token!,
+            "cache-control": "no-cache"
+        ]
         
+        let request = NSMutableURLRequest(url: NSURL(string: "http://beamoredevelopmentapi.azurewebsites.net/api/event/participantnumber?EventKey=\(eventKey)")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+            if let _data = data {
+                do{
+                    if let json = try JSONSerialization.jsonObject(with: _data) as? [String: AnyObject] {
+                        if let data = json as? [String: AnyObject] {
+                            let model = EventParticipantModel(data)
+                            completionHandler(model)
+                        }
+                    }
+                } catch { }
+            }
+        })
+        dataTask.resume()
     }
     
     public func subscribeEvent(eventKey: String, completionHandler: @escaping (ResultModel) -> Void) {
-        var model = ResultModel()
+        let token = UserDefaults.standard.string(forKey: "token")
         let headers = [
-            "authorization": "bearer \(token)",
+            "authorization": "bearer " + token!,
             "cache-control": "no-cache",
             "content-type" : "application/json"
         ]
@@ -106,7 +128,7 @@ class EventService {
                     do{
                         if let json = try JSONSerialization.jsonObject(with: _data) as? [String: AnyObject] {
                             if let data = json["Data"] as? [String: AnyObject] {
-                                model = ResultModel(data)
+                                let model = ResultModel(data)
                                 completionHandler(model)
                             }
                         }
@@ -114,9 +136,43 @@ class EventService {
                 }
             })
             task.resume()
-        } catch {
-            
-        }
+        } catch { }
     }
-    
+
+    public func unSubscribeEvent(eventKey: String, completionHandler: @escaping (ResultModel) -> Void) {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers = [
+            "authorization": "bearer \(token)",
+            "cache-control": "no-cache",
+            "content-type" : "application/json"
+        ]
+        guard let endpointUrl = URL(string: "http://beamoredevelopmentapi.azurewebsites.net/api/event/unsubscribe") else {
+            return
+        }
+        
+        var postData = [String:Any]()
+        postData["EventKey"] = eventKey
+        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: postData, options: [])
+            var request = URLRequest(url: endpointUrl)
+            request.httpMethod = "POST"
+            request.allHTTPHeaderFields = headers
+            request.httpBody = data
+            let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+                if let _data = data {
+                    do{
+                        if let json = try JSONSerialization.jsonObject(with: _data) as? [String: AnyObject] {
+                            if let data = json["Data"] as? [String: AnyObject] {
+                                let model = ResultModel(data)
+                                completionHandler(model)
+                            }
+                        }
+                    } catch { }
+                }
+            })
+            task.resume()
+        } catch { }
+    }
+
 }

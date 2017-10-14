@@ -9,15 +9,14 @@
 import Foundation
 
 class ResultModel {
-    var IsSuccess: Bool?
-    var Message: String?
+    var isSuccess: Bool
+    var message: String
     
-    init() {
+    init(_ json: [String:AnyObject]) {
+        if let isSuccess = json["IsSuccess"] as? Bool { self.isSuccess = isSuccess }
+        else { self.isSuccess = false }
         
-    }
-    
-    init (_ json: [String: AnyObject]) {
-        self.IsSuccess = json["IsSuccess"] as? Bool
-        self.Message = json["Message"] as? String
+        if let message = json["Message"] as? String { self.message = message }
+        else { self.message = "" }
     }
 }
