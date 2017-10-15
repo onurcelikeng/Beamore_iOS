@@ -103,6 +103,64 @@ class EventService {
         dataTask.resume()
     }
     
+    public func getEventFlows(eventKey: String, completionHandler: @escaping (EventFlowModel) -> Void) {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers = [
+            "authorization": "bearer " + token!,
+            "cache-control": "no-cache"
+        ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://beamoredevelopmentapi.azurewebsites.net/api/event/detail?key=\(eventKey)")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+            if let _data = data {
+                do{
+                    if let json = try JSONSerialization.jsonObject(with: _data) as? [String: Any] {
+                        if let data = json as? [String: AnyObject] {
+                            let model = EventFlowModel(data)
+                            completionHandler(model)
+                        }
+                    }
+                } catch { }
+            }
+        })
+        dataTask.resume()
+    }
+    
+    public func getEventFlowDetails(flowId: String, completionHandler: @escaping (EventFlowDetailModel) -> Void) {
+        let token = UserDefaults.standard.string(forKey: "token")
+        let headers = [
+            "authorization": "bearer " + token!,
+            "cache-control": "no-cache"
+        ]
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://beamoredevelopmentapi.azurewebsites.net/api/event/flowdetails?id=\(flowId)")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
+            if let _data = data {
+                do{
+                    if let json = try JSONSerialization.jsonObject(with: _data) as? [String: Any] {
+                        if let data = json["Data"] as? [String: AnyObject] {
+                            let model = EventFlowDetailModel(data)
+                            completionHandler(model)
+                        }
+                    }
+                } catch { }
+            }
+        })
+        dataTask.resume()
+    }
+    
     public func subscribeEvent(eventKey: String, completionHandler: @escaping (ResultModel) -> Void) {
         let token = UserDefaults.standard.string(forKey: "token")
         let headers = [

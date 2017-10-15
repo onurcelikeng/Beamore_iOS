@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
     @objc public func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+     
     @IBAction func loginUIButtonClick(_ sender: Any) {
         if(emailTextField.text != "" && passwordTextField.text != "") {
             let email = emailTextField.text

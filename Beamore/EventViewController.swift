@@ -56,14 +56,20 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.eventName.text = eventList[indexPath.row].eventName
             cell.eventEmail.text = eventList[indexPath.row].eventEmail
             
-        DispatchQueue.main.async {
-            let logoUrl = NSURL(string: self.eventList[indexPath.row].logoUrl)
-             if logoUrl != nil {
-             let data = NSData(contentsOf: (logoUrl as URL?)!)
-             cell.eventPhoto.image = UIImage(data: data! as Data)
-             cell.eventPhoto.layer.cornerRadius = cell.eventPhoto.layer.frame.height / 2
-             }
-         }
+            let imageURL = URL(string: self.eventList[indexPath.row].logoUrl)
+            let session = URLSession(configuration: .default)
+            let downloadImageTask = session.dataTask(with: imageURL!) { (data, response, error) in
+                if (response as? HTTPURLResponse) != nil {
+                    if let imageData = data {
+                        DispatchQueue.main.async {
+                            cell.eventPhoto.image = UIImage(data: imageData)
+                            cell.eventPhoto.layer.cornerRadius = cell.eventPhoto.layer.frame.height / 2
+                            cell.eventPhoto.layer.masksToBounds = true
+                        }
+                    }
+                }
+            }
+            downloadImageTask.resume()
         }
         
         return cell

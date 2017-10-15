@@ -1,21 +1,21 @@
 //
-//  EventDetailModel.swift
+//  EventFlowModel.swift
 //  Beamore
 //
-//  Created by Onur Celik on 12/10/2017.
+//  Created by Onur Celik on 15/10/2017.
 //  Copyright © 2017 Onur Celik. All rights reserved.
 //
 
 import Foundation
 
-class EventDetailModel {
-    let status: String
+class EventFlowModel {
+    let status: Int
     let message: String
     let data: [Datum]
     
     init(_ json: [String:AnyObject]) {
-        if let status = json["Status"] as? String { self.status = status }
-        else { self.status = "" }
+        if let status = json["Status"] as? Int { self.status = status }
+        else { self.status = 0 }
         
         if let message = json["Message"] as? String { self.message = message }
         else { self.message = "" }
@@ -80,3 +80,4 @@ class FlowDayDetail {
         else { self.isDone = false }
     }
 }
+
