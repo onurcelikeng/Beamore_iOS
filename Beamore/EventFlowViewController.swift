@@ -10,15 +10,24 @@ import UIKit
 
 class EventFlowViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var flowTableView: UITableView!
-    var flowList: [Datum] = []
+    var refreshControl: UIRefreshControl!
     var sectionData: [Int: [FlowDayDetail]] = [:]
+    var flowList: [Datum] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configure()
         self.getEventFlows()
     }
     
+    
+    private func configure() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        flowTableView.addSubview(refreshControl)
+    }
     
     private func getEventFlows() {
         let client = EventService()
@@ -36,6 +45,12 @@ class EventFlowViewController: UIViewController, UITableViewDataSource, UITableV
                 }
             }
         }
+    }
+    
+    @objc func refresh(_ sender: Any) {
+        self.flowList.removeAll()
+        self.getEventFlows()
+        refreshControl.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,6 +89,5 @@ class EventFlowViewController: UIViewController, UITableViewDataSource, UITableV
         
         performSegue(withIdentifier: "twoSegue", sender: nil)
         tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
-        
     }
 }

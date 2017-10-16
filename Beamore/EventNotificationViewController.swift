@@ -10,15 +10,24 @@ import UIKit
 
 class EventNotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var notificationTableView: UITableView!
+    var refreshControl: UIRefreshControl!
     var notificationList: [NotificationModel] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configure()
         self.getEventNotification()
     }
     
-
+    
+    private func configure() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        notificationTableView.addSubview(refreshControl)
+    }
+    
     private func getEventNotification() {
         let client = NotificationService()
         DispatchQueue.global(qos: .userInitiated).async {
@@ -33,6 +42,12 @@ class EventNotificationViewController: UIViewController, UITableViewDataSource, 
                 }
             }
         }
+    }
+    
+    @objc func refresh(_ sender: Any) {
+        self.notificationList.removeAll()
+        self.getEventNotification()
+        refreshControl.endRefreshing()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

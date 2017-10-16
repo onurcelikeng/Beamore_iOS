@@ -58,6 +58,35 @@ class RegisterViewController: UIViewController {
         view.endEditing(true)
     }
     
+    private func login(email: String, password: String) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let accountService = AccountService()
+            accountService.login(username: email, password: password) { (model) -> Void in
+                if !model.access_token.isEmpty {
+                    DispatchQueue.main.async(execute: {
+                        let defaults = UserDefaults.standard
+                        defaults.set(model.access_token, forKey: "token")
+                        defaults.synchronize()
+                        
+                        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+                        let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "tabbar")
+                        appDelegate.window?.rootViewController = initialViewController
+                        appDelegate.window?.makeKeyAndVisible()
+                    });
+                } else {
+                    DispatchQueue.main.async(execute: {
+                        let alertSuccess = UIAlertController(title: "Bildirim", message: "Lütfen bilgilerinizi doğru girdiğinizden emin olunuz.", preferredStyle: UIAlertControllerStyle.alert)
+                        let closeAction = UIAlertAction(title: "Kapat", style: UIAlertActionStyle.destructive) {
+                            (result : UIAlertAction) -> Void in
+                        }
+                        alertSuccess.addAction(closeAction)
+                        self.present(alertSuccess, animated: true, completion: nil)
+                    });
+                }
+            }
+        }
+    }
+    
     @IBAction func registerUIButtonClick(_ sender: Any) {
         if(usernameUITextFiled.text != nil && emailUITextFiled.text != nil && passwordUITextFiled.text != nil) {
             let username = usernameUITextFiled.text
@@ -69,12 +98,7 @@ class RegisterViewController: UIViewController {
                 accountService.register(username: username!, email: email!, password: password!) { (model) -> Void in
                     if model.isSuccess {
                         DispatchQueue.main.async(execute: {
-                            let alertSuccess = UIAlertController(title: "Bildirim", message: "Onay mesajı mail adresine gönderilmiştir. Lütfen hesabınızı kontrol ediniz ve onaylayınız.", preferredStyle: UIAlertControllerStyle.alert)
-                            let closeAction = UIAlertAction(title: "Kapat", style: UIAlertActionStyle.destructive) {
-                                (result : UIAlertAction) -> Void in
-                            }
-                            alertSuccess.addAction(closeAction)
-                            self.present(alertSuccess, animated: true, completion: nil)
+                            self.login(email: email!, password: password!)
                         });
                     } else {
                         DispatchQueue.main.async(execute: {

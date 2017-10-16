@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6001CE9A1F90E65900B4A0CE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6001CE991F90E65900B4A0CE /* TabBarViewController.swift */; };
+		600B5B2C1F95104F0055F941 /* SurveyAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B5B2B1F95104F0055F941 /* SurveyAnswerModel.swift */; };
+		600B5B2E1F9510D70055F941 /* SurveyAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B5B2D1F9510D70055F941 /* SurveyAnswerViewController.swift */; };
 		605016EB1F604C20000A8428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605016EA1F604C20000A8428 /* AppDelegate.swift */; };
 		605016F21F604C20000A8428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605016F01F604C20000A8428 /* Main.storyboard */; };
 		605016F41F604C20000A8428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605016F31F604C20000A8428 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		6001CE991F90E65900B4A0CE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		600B5B2B1F95104F0055F941 /* SurveyAnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAnswerModel.swift; sourceTree = "<group>"; };
+		600B5B2D1F9510D70055F941 /* SurveyAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAnswerViewController.swift; sourceTree = "<group>"; };
 		605016E71F604C20000A8428 /* Beamore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beamore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605016EA1F604C20000A8428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		605016F11F604C20000A8428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				60FCBB671F9357A6005172B3 /* EventFlowModel.swift */,
 				60BEBAC31F93913000DC897C /* SurveyModel.swift */,
 				60BEBACF1F93A36100DC897C /* EventFlowDetailModel.swift */,
+				600B5B2B1F95104F0055F941 /* SurveyAnswerModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				60BEBAC11F93900900DC897C /* EventSurveyViewController.swift */,
+				600B5B2D1F9510D70055F941 /* SurveyAnswerViewController.swift */,
 			);
 			name = Survey;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60BEBACE1F93A33900DC897C /* EventFlowDetailViewController.swift in Sources */,
+				600B5B2C1F95104F0055F941 /* SurveyAnswerModel.swift in Sources */,
 				60EFA5911F744E6400899A56 /* TokenModel.swift in Sources */,
 				608A229B1F938BE800DD9DE0 /* EventNotificationViewController.swift in Sources */,
 				60EFA58F1F744D8A00899A56 /* AccountService.swift in Sources */,
@@ -371,6 +378,7 @@
 				60DAF9151F8F5F2D000403C7 /* DiscoverEventModel.swift in Sources */,
 				60BEBAC21F93900900DC897C /* EventSurveyViewController.swift in Sources */,
 				6001CE9A1F90E65900B4A0CE /* TabBarViewController.swift in Sources */,
+				600B5B2E1F9510D70055F941 /* SurveyAnswerViewController.swift in Sources */,
 				60D0FAED1F8617F8008A14E2 /* ResultModel.swift in Sources */,
 				608A22961F93617D00DD9DE0 /* EventFlowViewController.swift in Sources */,
 				605017301F60528E000A8428 /* DiscoverViewController.swift in Sources */,

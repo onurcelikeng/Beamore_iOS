@@ -43,7 +43,7 @@ class DiscoverViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @objc func refresh(_ sender: Any) {
         self.eventList.removeAll()
-        getEvents()
+        self.getEvents()
         refreshControl.endRefreshing()
     }
     

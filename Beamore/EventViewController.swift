@@ -16,18 +16,20 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configure()
         self.getEvents()
-        
+    }
+
+    private func configure() {
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
     }
-
     
     @objc func refresh(_ sender: Any) {
         self.eventList.removeAll()
-        //getEvents()
+        self.getEvents()
         refreshControl.endRefreshing()
     }
 
@@ -45,6 +47,32 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
     }
+    
+    private func unSubscribeEvent(eventKey: String) {
+        let client = EventService()
+        DispatchQueue.global(qos: .userInitiated).async {
+            client.unSubscribeEvent(eventKey: eventKey) { (model) -> Void in
+                DispatchQueue.main.async {
+                    if model.isSuccess {
+                        self.eventList.removeAll()
+                        self.getEvents()
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func exitButtonClick(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "token")
+        defaults.synchronize()
+        
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "login")
+        appDelegate.window?.rootViewController = initialViewController
+        appDelegate.window?.makeKeyAndVisible()
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.eventList.count
@@ -82,7 +110,17 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         performSegue(withIdentifier: "oneSegue", sender: nil)
         tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
+    }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            let eventKey = eventList[indexPath.row].eventKey
+            self.unSubscribeEvent(eventKey: eventKey)
+        }
     }
 
 }

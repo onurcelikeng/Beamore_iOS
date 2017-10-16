@@ -196,11 +196,11 @@ class EventService {
             task.resume()
         } catch { }
     }
-
+    
     public func unSubscribeEvent(eventKey: String, completionHandler: @escaping (ResultModel) -> Void) {
         let token = UserDefaults.standard.string(forKey: "token")
         let headers = [
-            "authorization": "bearer \(token)",
+            "authorization": "bearer " + token!,
             "cache-control": "no-cache",
             "content-type" : "application/json"
         ]

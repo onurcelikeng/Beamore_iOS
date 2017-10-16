@@ -9,7 +9,6 @@
 import Foundation
 
 class NotificationService {
-
     
     public func getEventNotifications(eventKey: String, completionHandler: @escaping ([NotificationModel]) -> Void) {
         var list: [NotificationModel] = []
