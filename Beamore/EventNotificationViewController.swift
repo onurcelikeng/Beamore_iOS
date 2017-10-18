@@ -60,4 +60,15 @@ class EventNotificationViewController: UIViewController, UITableViewDataSource, 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let notification = self.notificationList[indexPath.row].message
+        let alertSuccess = UIAlertController(title: "", message: notification, preferredStyle: UIAlertControllerStyle.alert)
+        let closeAction = UIAlertAction(title: "Kapat", style: UIAlertActionStyle.destructive) {
+            (result : UIAlertAction) -> Void in
+        }
+        alertSuccess.addAction(closeAction)
+        self.present(alertSuccess, animated: true, completion: nil)
+    }
+    
+    
 }
